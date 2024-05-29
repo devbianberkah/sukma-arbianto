@@ -1,7 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-
+import HeaderMenu from './HeaderMenu';
 function App() {
+
+  function toggleMenu(){
+
+  }
+
   return (
     <div className="App">
       <nav id="desktop-nav">
@@ -14,6 +19,10 @@ function App() {
                 <li><a href='#contact'>Contact</a></li>
               </ul>
           </div>
+      </nav>
+      <nav id="hamburger-nav">
+        <div className='logo'>Sukma</div>
+        <HeaderMenu />
       </nav>
     </div>
   );
