@@ -101,9 +101,107 @@ function App() {
             alt='Arrow icon'
             className='icon arrow'
           />
-          
         </section>
-        
+        <section id="experience">
+          <p className='section__text__p1'>Explore My</p>
+          <h1 className='title'>Experience</h1>
+          <div className='experience-details-container'>
+              <div className='about-containers'>
+                <div className='details-container'>
+                  <h2 className='experience-sub-title'>Frontend Development</h2>
+                  <div className='article-container'>
+                    <article>
+                      <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
+                      <div className='article-sub-container'>
+                        <h3>HTML</h3>
+                        <p>Experienced</p>
+                      </div>
+                    </article>
+                    <article>
+                    <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
+                    <div className='article-sub-container'>
+                      <h3>CSS</h3>
+                      <p>Experienced</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
+                    <div className='article-sub-container'>
+                      <h3>SASS</h3>
+                      <p>Basic</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
+                    <div className='article-sub-container'>
+                      <h3>Javascript</h3>
+                      <p>Experienced</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
+                    <div className='article-sub-container'>
+                      <h3>Typescript</h3>
+                      <p>Basic</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
+                    <div className='article-sub-container'>
+                      <h3>Material UI</h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+                  </div>
+                </div>
+                <div className='details-container'>
+                <h2 className='experience-sub-title'>Backend Development</h2>
+                <div className='article-container'>
+                  <article>
+                    <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
+                    <div className='article-sub-container'>
+                      <h3>Laravel</h3>
+                      <p>Experienced</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
+                    <div className='article-sub-container'>
+                      <h3>Phalcon</h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+                  <article>
+                  <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
+                  <div className='article-sub-container'>
+                    <h3>C#</h3>
+                    <p>Basic</p>
+                  </div>
+                </article>
+                <article>
+                  <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
+                  <div className='article-sub-container'>
+                    <h3>Git</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
+                  <div className='article-sub-container'>
+                    <h3>Docker</h3>
+                    <p>Basic</p>
+                  </div>
+                </article>
+            </div>
+          </div>
+          </div>
+          </div>
+          <img 
+          src={window.location.origin+'/assets/arrow.png'}
+          alt='Arrow icon'
+          className='icon arrow'
+        />
+    </section>
     </div>
   );
 }
