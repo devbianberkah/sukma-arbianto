@@ -4,7 +4,7 @@ GENERAL
 
 @import url('http://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600$display=swap');
 .App {
-  margin :0;
+  margin :0 auto;
   padding:0;
   font-family: "Poppins", sans-serif;
 }
@@ -145,8 +145,8 @@ hmburger
 /*SECTIONS*/
 section{
   padding-top: 4vh;
-  height: 96vh;
-  margin:0 10rem;
+  /* height: 96vh; */
+  margin:5rem 10rem;
   box-sizing: border-box;
   min-height: fit-content;
 }
@@ -163,10 +163,10 @@ section{
   height: 80vh;
 }
 
-.section__pic-container{
+.section__pic-profile-container{
   display: flex;
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
   margin: auto 0;
 }
 
@@ -299,8 +299,8 @@ ABOUT SECTION*/
 }
 
 .section__pic-container{
-  height: 400px;
-  width: 400px;
+  height: 200px;
+  width: 200px;
   margin: auto 0;
 }
 
@@ -345,3 +345,32 @@ article{
 article .icon{
   cursor: default ;
 }
+
+/*PROJECT*/
+
+#projects{
+  position: relative;
+}
+
+.color-container{
+  border-color: rgb(163,163,163);
+  background: rgb(250,250,250);
+}
+
+.project-img{
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+
+.project-title{
+  margin: 1rem;
+  color: black;
+}
+
+.project-btn{
+  color:black;
+  border-color: rgb(163,163,163);
+}
+
+/*CONTACT*/
