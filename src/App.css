@@ -159,16 +159,19 @@ section{
 #profile{
   display: flex;
   justify-content: center;
-  gap: 5rem;
-  height: 80vh;
+  /* gap: 5rem; */
+  /* height: 80vh; */
 }
 
 .section__pic-profile-container{
   display: flex;
   height: 300px;
   width: 300px;
+  border-radius: 25px;
   margin: auto 0;
 }
+
+
 
 .section__text{
   align-self: center;
@@ -274,7 +277,7 @@ ABOUT SECTION*/
 }
 
 .about-pic{
-  border-radius: 2rem;
+  border-radius: 25rem;
 }
 
 .arrow{
@@ -374,3 +377,39 @@ article .icon{
 }
 
 /*CONTACT*/
+#contact{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-info-upper-container{
+  display:flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border:rgb(53,53,53) 0.1rem solid;
+  background:(250,250,250);
+  margin:2rem auto;
+  padding:0.5rem;
+}
+
+.contact-info-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin:1rem;
+}
+
+.contact-info-container p{
+  font-size: larger;
+}
+
+.contact-icon{
+  cursor : default;
+}
+
+.email-icon{
+  height: 2.5rem;
+}
