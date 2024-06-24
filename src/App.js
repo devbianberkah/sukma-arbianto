@@ -77,7 +77,7 @@ function App() {
                       className='icon'
                     />
                     <h3>Experience</h3>
-                    <p>2+ years<br/>Frontend Development </p>
+                    <p>8+ years<br/>Fullstack ( Frontend + Backend ) Development </p>
                   </div>
                   <div className='details-container'>
                       <img
@@ -91,7 +91,7 @@ function App() {
               </div>
               <div className='text-container'>
                 <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                Experienced Full Stack Developer in backend and frontend development, with a proven track record in PHP, Laravel, and Phalcon. My expertise lies in creating user-friendly interfaces using Angular, Vue, and ReactJS, and integrating APIs using Java and Dart in mobile development. I am seeking a challenging role where I can leverage my skills to deliver high-quality code, optimize performance, and continuously adapt to new technologies and changing requirements
                 </p>
               </div>
               </div>
@@ -270,7 +270,18 @@ function App() {
         />
       </section>
       <section id='contact'>
-      
+        <p className='section__text__p1'>Get in Touch</p>
+        <h1 className='title'>Contact Me</h1>
+        <div className='contact-info-upper-container'>
+          <div className='contact-info-container'>
+            <img 
+              src={window.location.origin+'/assets/email.png'}
+              alt='email icon'
+              className='icon contact-icon'
+            />
+            <p><a href='https://www.linkedin.com/in/sukma-arbianto-santosa-87972585/' target="_blank">Linkeidn</a></p>
+          </div>
+        </div>
       </section>
     </div>
   );
