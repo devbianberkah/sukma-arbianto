@@ -1,5 +1,6 @@
 import logo from './logo.svg';
-import './App.css';
+  import './App.css';
+import './mediaqueries.css';
 import { useRef } from 'react';
 import HeaderMenu from './HeaderMenu';
 function App() {
@@ -20,7 +21,7 @@ function App() {
               <ul className="nav-links">
                 <li><a href='#about'>About</a></li>
                 <li><a href='#experience'>Experience</a></li>
-                <li><a href='#project'>Project</a></li>
+                <li><a href='#projects'>Project</a></li>
                 <li><a href='#contact'>Contact</a></li>
               </ul>
           </div>
@@ -36,7 +37,7 @@ function App() {
           <div className='section__text'>
             <p className='section__text__p1'>Hello, I'm</p>
             <h1 className='title'>Sukma</h1>
-            <p className='section__text__p2'>Frontend Developer</p>
+            <p className='section__text__p2'>Fullstack Developer</p>
             <div className='btn-container'>
               <a className='btn btn-color-2' target='_blank' href='https://drive.google.com/file/d/1iJ7ZprOdJn9PSxVtvjA7igF7RtQnb8lv/view?usp=sharing' download='cv'>
               Download CV</a> 
@@ -283,6 +284,19 @@ function App() {
           </div>
         </div>
       </section>
+      <footer>
+        <nav>
+          <div className='nav-links-container'>
+            <ul className='nav-links'>
+              <li><a href='#about'>About</a></li>
+              <li><a href='#experience'>Experience</a></li>
+              <li><a href='#projects'>Projects</a></li>
+              <li><a href='#contact'>Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <p>Copyright &#169; 2024 Sukma Arbianto. All Rights Reserverd </p>
+      </footer>
     </div>
   );
 }
