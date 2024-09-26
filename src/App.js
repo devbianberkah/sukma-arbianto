@@ -16,7 +16,6 @@ function App() {
   return (
     <div className="App">
       <nav id="desktop-nav">
-          <div className='logo'>Sukma</div>
           <div>
               <ul className="nav-links">
                 <li><a href='#about'>About</a></li>
@@ -27,20 +26,17 @@ function App() {
           </div>
       </nav>
       <nav id="hamburger-nav">
-        <div className='logo'>Sukma</div>
         <HeaderMenu />
       </nav>
         <section id="profile">
-          <div className="section__pic-profile-container">
-            <img src={window.location.origin+'/assets/forest.jpg'} alt='profile-img'></img>
-          </div>
+          
           <div className='section__text'>
             <h1 className='section__text__p1'>Hello, I'm</h1>
             <h1 className='title'>Sukma Arbianto</h1>
             <p className='section__text__p2'>and I'm a Fullstack Developer</p>
             <div className='btn-container'>
-              <a className='btn btn-color-2' target='_blank' href='https://drive.google.com/file/d/1iJ7ZprOdJn9PSxVtvjA7igF7RtQnb8lv/view?usp=sharing' download='cv'>
-              Download CV</a> 
+              <a className='btn btn-color-2' target='_blank' href='https://docs.google.com/document/d/1rhD7TTAlkUoxoZlsYZNHaF7sNjJrN5Z0MWOPXPL1jkA/pub' >
+              My Curriculum Vitae</a> 
               <div id="socials-container">
                <img
                 src={window.location.origin+'/assets/linkedin.png'}
@@ -58,52 +54,33 @@ function App() {
           </div>
         </section>
         <section id="about">
-          <p className='section__text__p1'>Get to Know More</p>
-          <h1 className='title'>About Me</h1>
+          <h2 className='section__text__p1'>Get to Know More</h2>
+          <h2 className='title'>About Me</h2>
             <div className='section-container'>
-              <div className='section__pic-container'>
-                <img
-                  src={window.location.origin+'/assets/profil.jpg'}
-                  alt="Profile Pic"
-                  className='about-pic'/>
-              </div>
+              
               <div className='about-details-container'>
                 <div className='about-containers'>
                   <div className='details-container'>
-                    <img 
-                      src={window.location.origin+'/assets/experience.png'}
-                      alt='Experience Icon'
-                      className='icon'
-                    />
                     <h3>Experience</h3>
-                    <p>8+ years<br/>Fullstack ( Frontend + Backend ) Development </p>
+                    <p>8+ years of Fullstack Development </p>
                   </div>
                   <div className='details-container'>
-                      <img
-                        src={window.location.origin+'/assets/education.png'}
-                        alt='education icon'
-                        className='icon'
-                      />
-                      <h3>Education</h3>
+                     <h3>Education</h3>
                       <p>S.Kom, Bachelors Degree</p>
-                    </div>
-              </div>
-              <div className='text-container'>
-                <p>
-                Experienced Full Stack Developer in backend and frontend development, with a proven track record in PHP, Laravel, and Phalcon. My expertise lies in creating user-friendly interfaces using Angular, Vue, and ReactJS, and integrating APIs using Java and Dart in mobile development. I am seeking a challenging role where I can leverage my skills to deliver high-quality code, optimize performance, and continuously adapt to new technologies and changing requirements
-                </p>
-              </div>
+                  </div>
+                </div>
+                <div className='text-container'>
+                  <p>
+                  I have 8 years of experience working both onsite and remotely as a Fullstack Developer in fast-paced startup environments. I specialize in web and mobile application development, with a strong focus on frontend technologies. I am skilled at translating complex UI/UX designs into pixel-perfect, user-centric interfaces, while ensuring robust backend architecture for seamless functionality.                </p>
+                </div>
+                <div className="section__pic-profile-container">
+                  <img src={window.location.origin+'/assets/forest.jpg'} alt='profile-img'></img>
+                </div>
               </div>
             </div>
-            <img 
-            src={window.location.origin+'/assets/arrow.png'}
-            alt='Arrow icon'
-            className='icon arrow'
-          />
-        </section>
+          </section>
         <section id="experience">
-          <p className='section__text__p1'>Explore My</p>
-          <h1 className='title'>Experience</h1>
+          <h1 className='title'>My Career Journey</h1>
           <div className='experience-details-container'>
               <div className='about-containers'>
                 <div className='details-container'>
@@ -284,6 +261,13 @@ function App() {
       </section>
       <footer>
         <nav>
+       
+          <div className='section__pic-container'>
+                <img
+                  src={window.location.origin+'/assets/profil.jpg'}
+                  alt="Profile Pic"
+                  className='about-pic'/>
+              </div>
           <div className='nav-links-container'>
             <ul className='nav-links'>
               <li><a href='#about'>About</a></li>
