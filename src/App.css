@@ -158,6 +158,8 @@ section{
 #profile{
   display: flex;
   justify-content: center;
+  margin :0;
+  height: 30rem;
   /* gap: 5rem; */
   /* height: 80vh; */
 }
@@ -297,7 +299,6 @@ ABOUT SECTION*/
 }
 
 .details-container{
-  padding: 1.5rem;
   flex:1;
   background:white;
   border-radius: 2rem;
