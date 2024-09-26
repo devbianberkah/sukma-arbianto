@@ -30,9 +30,10 @@ nav, .nav-links{
 }
 
 nav{
-  justify-content: space-around;
+  justify-content: end;
   align-items: center;
   height: 17vh;
+  margin: 0 1rem;
 }
 
 .nav-links{
@@ -160,11 +161,20 @@ section{
   /* gap: 5rem; */
   /* height: 80vh; */
 }
-
-.section__pic-profile-container{
+.section__pic-profile-container {
   display: flex;
   height: 20rem;
   border-radius: 25px;
+  overflow: hidden; /* Ensure that any overflowing content is hidden */
+}
+.section__pic-profile-container img {
+  width: 100%; /* Make the image take up the full width of its container */
+  object-fit: cover; /* Ensures the image is cropped while maintaining aspect ratio */
+  border-radius: 25px; /* Keep the rounded corners */
+  object-position: 50% 67%; /* This shifts the focus upwards, showing more of the upper part of the image */
+  display: block; /* Ensures the image behaves like a block element */
+  margin: 0; /* Remove any potential default margins */
+  padding: 0; /* Remove any potential padding */
 }
 
 
