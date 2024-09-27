@@ -54,133 +54,125 @@ function App() {
           </div>
         </section>
         <section id="about">
-          <h2 className='section__text__p1'>Get to Know More</h2>
           <h2 className='title'>About Me</h2>
             <div className='section-container'>
-              
-              <div className='about-details-container'>
+            <div className='about-details-container'>
                 <div className='about-containers'>
                   <div className='details-container'>
-                    <h3>Experience</h3>
-                    <p>8+ years of Fullstack Development </p>
-                  </div>
+                    <h3 className='title-container'>Get to Know Me</h3>
+                    <p className='details-experience-container'>I am a Fullstack Developer with over 8 years of experience building and managing both backend and frontend aspects of websites and web applications, as well as developing mobile applications.</p>
+                    <p className='details-experience-container'>I’m currently open to job opportunities where I can contribute my skills, continue learning, and grow professionally. If you have a relevant opportunity that aligns with my experience, feel free to reach out.</p>
+                 
+                    </div>
                   <div className='details-container'>
-                     <h3>Education</h3>
-                      <p>S.Kom, Bachelors Degree</p>
-                  </div>
-                </div>
-                <div className='text-container'>
-                  <p>
-                  I have 8 years of experience working both onsite and remotely as a Fullstack Developer in fast-paced startup environments. I specialize in web and mobile application development, with a strong focus on frontend technologies. I am skilled at translating complex UI/UX designs into pixel-perfect, user-centric interfaces, while ensuring robust backend architecture for seamless functionality.                </p>
-                </div>
-                <div className="section__pic-profile-container">
-                  <img src={window.location.origin+'/assets/forest.jpg'} alt='profile-img'></img>
-                </div>
-              </div>
-            </div>
-          </section>
-        <section id="experience">
-          <h1 className='title'>My Career Journey</h1>
-          <div className='experience-details-container'>
-              <div className='about-containers'>
-                <div className='details-container'>
-                  <h2 className='experience-sub-title'>Frontend Development</h2>
-                  <div className='article-container'>
-                    <article>
-                      <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
-                      <div className='article-sub-container'>
-                        <h3>HTML</h3>
-                        <p>Experienced</p>
-                      </div>
-                    </article>
-                    <article>
-                    <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
-                    <div className='article-sub-container'>
-                      <h3>CSS</h3>
-                      <p>Experienced</p>
-                    </div>
-                  </article>
-                  <article>
-                    <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
-                    <div className='article-sub-container'>
-                      <h3>SASS</h3>
-                      <p>Basic</p>
-                    </div>
-                  </article>
-                  <article>
-                    <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
-                    <div className='article-sub-container'>
-                      <h3>Javascript</h3>
-                      <p>Experienced</p>
-                    </div>
-                  </article>
-                  <article>
-                    <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
-                    <div className='article-sub-container'>
-                      <h3>Typescript</h3>
-                      <p>Basic</p>
-                    </div>
-                  </article>
-                  <article>
-                    <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
-                    <div className='article-sub-container'>
-                      <h3>Material UI</h3>
-                      <p>Intermediate</p>
-                    </div>
-                  </article>
-                  </div>
-                </div>
-                <div className='details-container'>
-                <h2 className='experience-sub-title'>Backend Development</h2>
-                <div className='article-container'>
-                  <article>
+                     <h3>My Skills</h3>
+                     <div className='article-container'>
+                     <article>
+                       <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
+                       <div className='article-sub-container'>
+                         <h3>HTML</h3>
+                       </div>
+                     </article>
+                     <article>
+                     <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
+                     <div className='article-sub-container'>
+                       <h3>CSS</h3>
+                       
+                     </div>
+                   </article>
+                   <article>
+                     <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
+                     <div className='article-sub-container'>
+                       <h3>Javascript</h3>
+                     </div>
+                   </article>
+                   <article>
+                     <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
+                     <div className='article-sub-container'>
+                       <h3>AngularJs</h3>
+                     </div>
+                   </article>
+                   <article>
+                     <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
+                     <div className='article-sub-container'>
+                       <h3>Typescript</h3>
+                       
+                     </div>
+                   </article>
+                   <article>
+                     <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
+                     <div className='article-sub-container'>
+                       <h3>ReactJs</h3>
+                       <p></p>
+                     </div>
+                   </article>
+                   <article>
                     <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
                     <div className='article-sub-container'>
                       <h3>Laravel</h3>
-                      <p>Experienced</p>
+                      
                     </div>
                   </article>
                   <article>
                     <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
                     <div className='article-sub-container'>
                       <h3>Phalcon</h3>
-                      <p>Intermediate</p>
                     </div>
                   </article>
                   <article>
                   <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
                   <div className='article-sub-container'>
                     <h3>C#</h3>
-                    <p>Basic</p>
+                    
                   </div>
-                </article>
-                <article>
-                  <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
-                  <div className='article-sub-container'>
-                    <h3>Git</h3>
-                    <p>Experienced</p>
+                  </article>
+                  <article>
+                    <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
+                    <div className='article-sub-container'>
+                      <h3>Git</h3>
+                      
+                    </div>
+                  </article>
+                  <article>
+                    <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
+                    <div className='article-sub-container'>
+                      <h3>Docker</h3>
+                      
+                    </div>
+                  </article>
+                   </div>
                   </div>
-                </article>
-                <article>
-                  <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
-                  <div className='article-sub-container'>
-                    <h3>Docker</h3>
-                    <p>Basic</p>
-                  </div>
-                </article>
+                </div>   
+              </div>
+            </div>
+        </section>
+        <section id="experience">
+          <h1 className='title'>My Career Journey</h1>
+          <div className='experience-details-container'>
+            <div className='about-containers'>
+                <div className='details-container'>
+                </div>
+                <div className='details-container'>
+                    <div>
+                      <h3>Web Developer</h3>
+                      <p>
+                        <a href='https://kirim.email/'>PT. Kirim Email Indonesia</a>
+                        </p>
+                      <p>2022-Present</p>
+                      <p className='space'></p>
+                      <h3>Full Stack Developer</h3>
+                      <p>
+                        <a href='https://profio.co.id/'>PT. Profio Teknova Indonesia</a>
+                      </p>
+                      <p>2015-2022</p>
+                      <p></p>
+                    </div>
+                </div> 
             </div>
           </div>
-          </div>
-          </div>
-          <img 
-          src={window.location.origin+'/assets/arrow.png'}
-          alt='Arrow icon'
-          className='icon arrow'
-        />
       </section>
       <section id="projects">
-       <p className='section__text__p1'>Showcasing My</p>
-       <h1 className='title'>Project</h1>
+       <h1 className='title'>Projects</h1>
        <div className='experience-details-container'>
          <div className='about-containers'>
           <div className='details-container color-container'>
@@ -277,6 +269,7 @@ function App() {
             </ul>
           </div>
         </nav>
+       
         <p>Copyright &#169; 2024 Sukma Arbianto. All Rights Reserverd </p>
       </footer>
     </div>

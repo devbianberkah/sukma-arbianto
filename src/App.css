@@ -145,7 +145,7 @@ hmburger
 
 /*SECTIONS*/
 section{
-  margin:5rem 5rem;
+  margin:2rem 5rem;
   box-sizing: border-box;
   min-height: fit-content;
 }
@@ -165,7 +165,7 @@ section{
 }
 .section__pic-profile-container {
   display: flex;
-  height: 20rem;
+  height: 20%;
   border-radius: 25px;
   overflow: hidden; /* Ensure that any overflowing content is hidden */
 }
@@ -186,6 +186,10 @@ section{
   width: 90%;
   margin-left: 1.5rem;
   line-height: 1.25;
+}
+
+.space{
+  height: 1rem;
 }
 
 .section__text p {
@@ -302,9 +306,21 @@ ABOUT SECTION*/
   flex:1;
   background:white;
   border-radius: 2rem;
-  border: rgb(53,53,53) 0.1rem solid;
-  border-color: rgb(163,163,165);
-  text-align: center;
+  padding: 1rem;
+  /* border: rgb(53,53,53) 0.1rem solid;
+  border-color: rgb(163,163,165); */
+  /* text-align: center; */
+}
+
+.title-container{
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.details-experience-container{
+  text-align: justify;
+  /* padding : 1rem 1rem 0.5rem 1rem; */
+  /* margin:0; */
 }
 
 .section-container{
@@ -341,8 +357,6 @@ ABOUT SECTION*/
   text-align: initial;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 2.5rem;
-  justify-content:space-around;
 }
 
 .article-sub-container{
@@ -363,6 +377,7 @@ article .icon{
 /*PROJECT*/
 
 #projects{
+  margin-top: 0 ;
   position: relative;
 }
 
