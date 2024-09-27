@@ -1,3 +1,5 @@
+
+
 @media screen and (max-width: 1200px) {
     #desktop-nav{
         display: none;
@@ -24,6 +26,8 @@
     .about-containers{
         flex-wrap: nowrap;
     }
+
+  
 }
 
 @media screen and (max-width: 1200px) {
@@ -58,6 +62,15 @@
     }
     .about-containers{
         margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .project-details-container {
+        flex-direction: column; /* Force the wrapping */  
+    }
+    .event{
+        flex-direction: column;
     }
 }
 
@@ -116,5 +129,14 @@
         width: auto;
         height: 46vw;
         justify-content: center;
+    }
+}
+
+@media screen and (max-width:321px) {
+    .project-img{
+        width: 75%;
+    }
+    .project-img-2{
+        width: 75%;
     }
 }

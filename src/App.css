@@ -6,9 +6,29 @@ GENERAL
 .App {
   margin :0 auto;
   padding:0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif; position: relative; /* Make sure the container has relative positioning */
+  z-index: 1; /* Ensure content inside the container is above the background */
 }
 
+@media screen and (max-width: 1023px) {
+ 
+}
+.App::before {
+  content: "";
+  position: absolute; /* Position the pseudo-element to cover the entire container */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/public/assets/sky_blue_gradient_background.png'); /* Background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.2; /* Apply the opacity to the background */
+  z-index: -1; /* Ensure the pseudo-element sits behind the content */
+  pointer-events: none; /* Ensure it doesn't block any clicks or hover effects */
+}
 .html{
   scroll-behavior: smooth;
 }
@@ -33,7 +53,7 @@ nav{
   justify-content: end;
   align-items: center;
   height: 17vh;
-  margin: 0 1rem;
+  margin: 0 5rem;
 }
 
 .nav-links{
@@ -145,7 +165,7 @@ hmburger
 
 /*SECTIONS*/
 section{
-  margin:2rem 5rem;
+  margin:2rem 10rem;
   box-sizing: border-box;
   min-height: fit-content;
 }
@@ -157,8 +177,6 @@ section{
 /*PROFILE SECTION*/
 #profile{
   display: flex;
-  justify-content: center;
-  margin :0;
   height: 30rem;
   /* gap: 5rem; */
   /* height: 80vh; */
@@ -184,7 +202,6 @@ section{
 .section__text{
   align-self: center;
   width: 90%;
-  margin-left: 1.5rem;
   line-height: 1.25;
 }
 
@@ -278,18 +295,11 @@ ABOUT SECTION*/
 }
 
 .about-containers{
-  gap: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
-}
-
-.about-details-container{
-  justify-content: center;
-  flex-direction: column;
-}
-
-.about-containers,.about-details-container{
   display: flex;
+  justify-content: space-around;
+
 }
 
 .about-pic{
@@ -304,7 +314,8 @@ ABOUT SECTION*/
 
 .details-container{
   flex:1;
-  background:white;
+  /* background:white; */
+  /* background-color: rgba(255, 255, 255, 0.5); */
   border-radius: 2rem;
   padding: 1rem;
   /* border: rgb(53,53,53) 0.1rem solid;
@@ -354,11 +365,6 @@ ABOUT SECTION*/
   margin-bottom: 2rem;
 }
 
-.experience-details-container{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
 
 .article-container{
   display: flex;
@@ -381,7 +387,6 @@ article{
 article .icon{
   cursor: default ;
 }
-
 /*PROJECT*/
 
 #projects{
@@ -391,9 +396,31 @@ article .icon{
 
 .color-container{
   border-color: rgb(163,163,163);
-  background: rgb(250,250,250);
-}
+  background-color: rgba(255, 255, 255, 0.5);
 
+}
+.project-details-container{
+  display: flex;
+  justify-content:space-evenly;
+  gap:2rem;
+  .event {
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+		cursor: pointer;
+		border-radius: 5px;
+		transition: all 0.3s;
+		box-shadow: 0 0 5px #ccc;
+		color: darken(#0684c2, 20);
+    padding:1rem;
+		text-align: justify;
+
+		&:hover {
+			box-shadow: 3px 3px 10px #ccc;
+   		z-index: 2;
+		}
+	}
+}
 .project-img-container{
   display: flex;
   height: 20rem; /* Or adjust the height as needed */
@@ -437,7 +464,7 @@ article .icon{
 }
 
 .contact-info-upper-container{
-    margin: 2.5rem 2rem; 
+    padding:1rem;
 }
 
 .contact-info-container{
@@ -468,4 +495,154 @@ footer{
 
 footer p{
   text-align: center;
+}
+
+.section__text h1,
+.section__text p,
+.section__text .btn-container,
+.section__text #socials-container {
+    opacity: 0;
+    transform: translateY(30px); /* Start the elements 30px below their normal position */
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.section__text h1:nth-child(1) {
+    animation-delay: 0.2s; /* Delay the first "Hello, I'm" */
+}
+
+.section__text .title {
+    animation-delay: 0.4s; /* Delay the second title "Sukma Arbianto" */
+}
+
+.section__text p {
+    animation-delay: 0.6s; /* Delay the paragraph text */
+}
+
+.section__text .btn-container {
+    animation-delay: 0.8s; /* Delay the button */
+}
+
+.section__text #socials-container {
+    animation-delay: 1s; /* Delay the social media icons */
+}
+
+.timeline-wrapper {
+  margin: 5rem 1rem;
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		height: 10px;
+		
+		background: lighten(#0684c2, 30);
+		width: 0px;
+		z-index: 0 !important;
+		left: 0;
+		bottom: 0px;
+	}
+}
+.timeline {
+	display: flex;
+	transition: all 0.3s;
+	justify-content: space-evenly;
+	padding-bottom: 30px;
+	border-bottom: 10px solid #0684c2;
+	margin: 0 0 50px 0;
+
+	.event {
+		background: lighten(#0684c2, 50);
+		cursor: pointer;
+		padding: 1em;
+		border-radius: 5px;
+		position: relative;
+		margin: 0 1em 0 1em;
+		transition: all 0.3s;
+		box-shadow: 0 0 5px #ccc;
+		color: darken(#0684c2, 20);
+		text-align: center;
+
+    h3 {
+			position: relative;
+			z-index: 1;
+
+			&::before {
+				content: "\f073";
+				display: block;
+				position: absolute;
+				top: 50px;
+				left: calc(50% - 15px);
+				font-size: 30px;
+				color: #0684c2;
+				opacity: 0.1;
+				z-index: 0;
+			}
+		}
+
+		p {
+			color: #0684c2;
+		}
+
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		&:hover {
+			background: lighten(#0684c2, 40);
+			box-shadow: 3px 3px 10px #ccc;
+   		z-index: 2;
+		}
+		
+
+		&::after {
+		margin: 0 auto;
+			position: relative;
+			bottom: -65px;
+			content: "";
+			display: block;
+			border-radius: 15px;
+			height: 30px;
+			width: 30px;
+			box-sizing: border-box;
+			box-shadow: 0 0 5px darken(#0684c2, 10);
+			background: #fff;
+			border: 5px solid #0684c2;
+			transition: all 0.25s;
+			z-index: 2;
+		}
+
+		&.active {
+			background: lighten(yellow, 44);
+			transform: scale(1.1) translateY(-5px);
+			box-shadow: 0 0 10px #ccc;
+			z-index: 2;
+		}
+		&.active::after {
+			border-color: lighten(#0684c2, 30);
+			transform: scale(1.1);
+		}
+		
+		&.previous {
+			background: rgba(0,0,0,0.05);
+						color: rgba(0,0,0,0.1);
+			p {
+										color: rgba(0,0,0,0.1);
+			}
+			&:hover {
+				opacity:1;
+			}
+		}
+	}
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); /* Start from 30px below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at the normal position */
+    }
 }
