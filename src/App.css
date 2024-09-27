@@ -145,7 +145,7 @@ hmburger
 
 /*SECTIONS*/
 section{
-  margin:5rem 5rem;
+  margin:2rem 5rem;
   box-sizing: border-box;
   min-height: fit-content;
 }
@@ -165,7 +165,7 @@ section{
 }
 .section__pic-profile-container {
   display: flex;
-  height: 20rem;
+  height: 20%;
   border-radius: 25px;
   overflow: hidden; /* Ensure that any overflowing content is hidden */
 }
@@ -186,6 +186,10 @@ section{
   width: 90%;
   margin-left: 1.5rem;
   line-height: 1.25;
+}
+
+.space{
+  height: 1rem;
 }
 
 .section__text p {
@@ -302,9 +306,21 @@ ABOUT SECTION*/
   flex:1;
   background:white;
   border-radius: 2rem;
-  border: rgb(53,53,53) 0.1rem solid;
-  border-color: rgb(163,163,165);
-  text-align: center;
+  padding: 1rem;
+  /* border: rgb(53,53,53) 0.1rem solid;
+  border-color: rgb(163,163,165); */
+  /* text-align: center; */
+}
+
+.title-container{
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.details-experience-container{
+  text-align: justify;
+  /* padding : 1rem 1rem 0.5rem 1rem; */
+  /* margin:0; */
 }
 
 .section-container{
@@ -313,11 +329,19 @@ ABOUT SECTION*/
 }
 
 .section__pic-container{
-  height: 200px;
-  width: 200px;
-  margin: auto 0;
+  width: 150px; /* Set width for the container */
+  height: 150px; /* Set height for the container */
+  border-radius: 50%; /* This makes the container circular */
+  overflow: hidden; /* Ensures any part of the image outside the circle is hidden */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.section__pic-container img{
+  width: 100%; /* Ensures the image fits inside the container */
+  height: 100%; /* Scales the image to fill the container */
+  object-fit: cover; /* Maintains aspect ratio and centers the image within the container */
+}
 /*EXPeRIENCE*/
 #experience{
   position: relative;
@@ -341,8 +365,6 @@ ABOUT SECTION*/
   text-align: initial;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 2.5rem;
-  justify-content:space-around;
 }
 
 .article-sub-container{
@@ -363,6 +385,7 @@ article .icon{
 /*PROJECT*/
 
 #projects{
+  margin-top: 0 ;
   position: relative;
 }
 
@@ -371,10 +394,28 @@ article .icon{
   background: rgb(250,250,250);
 }
 
+.project-img-container{
+  display: flex;
+  height: 20rem; /* Or adjust the height as needed */
+  width: 20rem;  /* Make the container square like the others */
+  border-radius: 25px;
+  overflow: hidden;
+}
+
 .project-img{
-  border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  width: 100%; /* Adjust the width to fill the container */
+  height: 100%; /* Adjust the height to fill the container */
+  object-fit: cover; /* This ensures the image scales to fill the container, keeping aspect ratio */
+  object-position: 5% 50%; /* This will center the image within the container, ensuring it doesn't look cut off */
+  border-radius: 25px; /* Keep the rounded corners */
+}
+
+.project-img-2{
+  width: 100%; /* Adjust the width to fill the container */
+  height: 100%; /* Adjust the height to fill the container */
+  object-fit: cover; /* This ensures the image scales to fill the container, keeping aspect ratio */
+  object-position: 75% 20%; /* This will center the image within the container, ensuring it doesn't look cut off */
+  border-radius: 25px; /* Keep the rounded corners */
 }
 
 .project-title{
@@ -396,13 +437,7 @@ article .icon{
 }
 
 .contact-info-upper-container{
-  display:flex;
-  justify-content: center;
-  border-radius: 2rem;
-  border:rgb(53,53,53) 0.1rem solid;
-  background:(250,250,250);
-  margin:2rem auto;
-  padding:0.5rem;
+    margin: 2.5rem 2rem; 
 }
 
 .contact-info-container{
