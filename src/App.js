@@ -7,13 +7,7 @@ function App() {
 
   const sectionAboutRef = useRef(null);
 
-  const scrollToSection = (elementRef) => {
-    window.scrollTo({
-      top:elementRef.current.offsetTop, behavior:'smooth'
-    });
-  };
-
-  return (
+   return (
     <div className="App">
       <nav id="desktop-nav">
           <div>
@@ -28,8 +22,7 @@ function App() {
       <nav id="hamburger-nav">
         <HeaderMenu />
       </nav>
-        <section id="profile">
-          
+        <section id="profile">         
           <div className='section__text'>
             <h1 className='section__text__p1'>Hello, I'm</h1>
             <h1 className='title'>Sukma Arbianto</h1>
@@ -148,40 +141,38 @@ function App() {
         </section>
         <section id="experience">
           <h1 className='title'>My Career Journey</h1>
-          <div className='experience-details-container'>
-            <div className='about-containers'>
-                <div className='details-container'>
+          <div className="container">
+            <h1></h1>
+            <div className="timeline-wrapper">
+                <div className="timeline">
+                <div className="event">
+                    <h3>Full Stack Developer</h3>
+                    <p>
+                      <a target='_blank' href='https://profio.co.id/'>PT. Profio Teknova Indonesia</a>
+                    </p>
+                    <p>2015-2022</p>
+                  </div>  
+                <div className="event">
+                    <h3>Web Developer</h3>
+                    <p>
+                      <a target='_blank' href='https://kirim.email/'>PT. Kirim Email Indonesia</a>
+                    </p>
+                    <p>2022-Present</p>
+                  </div>
+                  
                 </div>
-                <div className='details-container'>
-                    <div>
-                      <h3>Web Developer</h3>
-                      <p>
-                        <a href='https://kirim.email/'>PT. Kirim Email Indonesia</a>
-                        </p>
-                      <p>2022-Present</p>
-                      <p className='space'></p>
-                      <h3>Full Stack Developer</h3>
-                      <p>
-                        <a href='https://profio.co.id/'>PT. Profio Teknova Indonesia</a>
-                      </p>
-                      <p>2015-2022</p>
-                      <p></p>
-                    </div>
-                </div> 
             </div>
           </div>
-      </section>
+        </section>
       <section id="projects">
        <h1 className='title'>Projects</h1>
-       <div className='experience-details-container'>
-         <div className='about-containers'>
-          <div className='details-container color-container'>
-            <div className='article-container'>
+       <div className='project-details-container'>
+          <div className='event'>
               <div className='project-img-container'>
                 <img 
                   src={window.location.origin+'/assets/utas/homepage.png'}
                   alt='img-project'
-                  class="project-img"
+                  className="project-img"
                 />
               </div>
               <h2 className='experience-sub-title project-title'>UTAS Application</h2>
@@ -191,15 +182,13 @@ function App() {
                 Read More
                 </button>
               </div>
-            </div>
           </div>
-          <div className='details-container color-container'>
-            <div className='article-container'>
+          <div className='event'>
               <div className='project-img-container'>
                 <img 
                   src={window.location.origin+'/assets/onedata/home.png'}
                   alt='img-project'
-                  class="project-img-2"
+                  className="project-img-2"
                 />
               </div>
               <h2 className='experience-sub-title project-title'>Telkom - One Data</h2>
@@ -208,15 +197,13 @@ function App() {
                 <button className='btn btn-color-2 project-btn'>
                   Read More
                 </button>
-              </div>
             </div>
           </div>
-          <div className='details-container color-container'>
-            <div className='article-container'>
+          <div className='event'>
               <div className='project-img-container'><img 
                 src={window.location.origin+'/assets/katts/home.png'}
                 alt='img-project'
-                class="project-img-2"
+                className="project-img-2"
               />
               </div>
               <h2 className='experience-sub-title project-title'>Floo - Travel Apps</h2>
@@ -225,14 +212,13 @@ function App() {
                 <button className='btn btn-color-2 project-btn'>
                   Read More
                 </button>
-              </div>
             </div>
           </div>
-         </div>
+          
        </div>
       </section>
       <section id='contact'>
-        <h1 className='title'>Work With Me</h1>
+        <h1 className='title'>Contact</h1>
         <div className='contact-info-upper-container'>
           <div className='contact-info-container'>
             <div className='section__pic-container'>
