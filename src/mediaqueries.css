@@ -144,4 +144,39 @@
     .project-img-2{
         width: 75%;
     }
+    .section__text__p1{
+        animation-delay: 0.2s; /* Delay the first "Hello, I'm" */
+        font-size: 1rem;
+        margin:0 1rem;
+    }
+    .section__text h1.title{
+        animation-delay: 0.2s; /* Delay the first "Hello, I'm" */
+        font-size: 3rem;
+        margin:0 1rem;
+    }
+    .section__text p.section__text__p2{
+        animation-delay: 0.2s; /* Delay the first "Hello, I'm" */
+        font-size: 1rem;
+        margin:0 1rem;
+    }
+    .btn-color-2{
+        font-size: 12px;
+        margin-left:1rem;
+    }
+    section h2.title{
+        font-size: 3rem;
+        margin-left: 0.5rem;
+    }
+    .details-experience-container{
+        font-size: 12px;
+        text-align: left;
+    }
+    .article-sub-container{
+        font-size: .75rem;
+    }
+    section#experience h1.title,
+    section#projects h1.title,
+    section#contact h1.title{
+        font-size: 3rem;
+    }
 }
