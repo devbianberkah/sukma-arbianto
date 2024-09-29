@@ -1,15 +1,49 @@
 import logo from './logo.svg';
   import './App.css';
 import './mediaqueries.css';
-import { useRef } from 'react';
+import { useRef,useEffect } from 'react';
 import HeaderMenu from './HeaderMenu';
+import AboutSection from './AboutSection';
+import ExperienceSection from './ExperienceSection';
 function App() {
 
-  const sectionAboutRef = useRef(null);
+  const refs = useRef([]); // Create a ref for the section
 
-   return (
+  useEffect(() => {
+    const aboutElement = refs.current;
+
+    // Declare the observer inside the useEffect hook
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Add the class that triggers the animation
+            entry.target.classList.add("in-view");
+          }
+        });
+      },
+      { threshold: 0.2 } // Trigger animation when 20% of the section is visible
+    );
+
+    refs.current.forEach((ref) => {
+      if (ref) {
+        observer.observe(ref);
+      }
+    });
+
+    // Cleanup function to unobserve elements on unmount
+    return () => {
+      refs.current.forEach((ref) => {
+        if (ref) {
+          observer.unobserve(ref);
+        }
+      });
+    };
+  }, []);
+
+     return (
     <div className="App">
-      <nav id="desktop-nav">
+      <nav id="desktop-nav">  
           <div>
               <ul className="nav-links">
                 <li><a href='#about'>About</a></li>
@@ -46,124 +80,8 @@ function App() {
             
           </div>
         </section>
-        <section id="about">
-          <h2 className='title'>About Me</h2>
-            <div className='section-container'>
-            <div className='about-details-container'>
-                <div className='about-containers'>
-                  <div className='details-container'>
-                    <h3 className='title-container'>Get to Know Me</h3>
-                    <p className='details-experience-container'>I am a Fullstack Developer with over 8 years of experience building and managing both backend and frontend aspects of websites and web applications, as well as developing mobile applications.</p>
-                    <p className='details-experience-container'>I’m currently open to job opportunities where I can contribute my skills, continue learning, and grow professionally. If you have a relevant opportunity that aligns with my experience, feel free to reach out.</p>
-                 
-                  </div>
-                  <div className='details-container'>
-                     <h3>My Skills</h3>
-                     <div className='article-container'>
-                     <article>
-                       <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
-                       <div className='article-sub-container'>
-                         <h3>HTML</h3>
-                       </div>
-                     </article>
-                     <article>
-                     <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
-                     <div className='article-sub-container'>
-                       <h3>CSS</h3>
-                       
-                     </div>
-                   </article>
-                   <article>
-                     <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
-                     <div className='article-sub-container'>
-                       <h3>Javascript</h3>
-                     </div>
-                   </article>
-                   <article>
-                     <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
-                     <div className='article-sub-container'>
-                       <h3>AngularJs</h3>
-                     </div>
-                   </article>
-                   <article>
-                     <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
-                     <div className='article-sub-container'>
-                       <h3>Typescript</h3>
-                       
-                     </div>
-                   </article>
-                   <article>
-                     <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
-                     <div className='article-sub-container'>
-                       <h3>ReactJs</h3>
-                       <p></p>
-                     </div>
-                   </article>
-                   <article>
-                    <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
-                    <div className='article-sub-container'>
-                      <h3>Laravel</h3>
-                      
-                    </div>
-                  </article>
-                  <article>
-                    <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
-                    <div className='article-sub-container'>
-                      <h3>Phalcon</h3>
-                    </div>
-                  </article>
-                  <article>
-                  <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
-                  <div className='article-sub-container'>
-                    <h3>C#</h3>
-                    
-                  </div>
-                  </article>
-                  <article>
-                    <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
-                    <div className='article-sub-container'>
-                      <h3>Git</h3>
-                      
-                    </div>
-                  </article>
-                  <article>
-                    <img src={window.location.origin+'/assets/checkmark.png'} alt='Experience icon' className='icon'/>
-                    <div className='article-sub-container'>
-                      <h3>Docker</h3>
-                      
-                    </div>
-                  </article>
-                   </div>
-                  </div>
-                </div>   
-              </div>
-            </div>
-        </section>
-        <section id="experience">
-          <h1 className='title'>My Career Journey</h1>
-          <div className="container">
-            <h1></h1>
-            <div className="timeline-wrapper">
-                <div className="timeline">
-                <div className="event">
-                    <h3>Full Stack Developer</h3>
-                    <p>
-                      <a target='_blank' href='https://profio.co.id/'>PT. Profio Teknova Indonesia</a>
-                    </p>
-                    <p>2015-2022</p>
-                  </div>  
-                <div className="event">
-                    <h3>Web Developer</h3>
-                    <p>
-                      <a target='_blank' href='https://kirim.email/'>PT. Kirim Email Indonesia</a>
-                    </p>
-                    <p>2022-Present</p>
-                  </div>
-                  
-                </div>
-            </div>
-          </div>
-        </section>
+        <AboutSection refs={refs} />
+        <ExperienceSection refs={refs} />
       <section id="projects">
        <h1 className='title'>Projects</h1>
        <div className='project-details-container'>
