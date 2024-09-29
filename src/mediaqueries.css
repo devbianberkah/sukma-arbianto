@@ -80,6 +80,11 @@
         flex-wrap: wrap;
         margin:0;
     }
+    #hamburger-nav{
+        margin: 0 2rem;
+        z-index: 3;
+        position: relative;
+    }
     .section__pic-profile-container{
         height: 40rem;
     }

@@ -65,16 +65,20 @@ function App() {
               <a className='btn btn-color-2' target='_blank' href='https://docs.google.com/document/d/1rhD7TTAlkUoxoZlsYZNHaF7sNjJrN5Z0MWOPXPL1jkA/pub' >
               My Curriculum Vitae</a> 
               <div id="socials-container">
+              <a href='https://www.linkedin.com/in/sukma-arbianto-santosa-87972585/' target='_blank'>
                <img
                 src={window.location.origin+'/assets/linkedin.png'}
                 alt="my linkedin profile"
                 className='icon'
                ></img>
+               </a>
+               <a href='https://github.com/devbianberkah' target='_blank'>
                <img
                 src={window.location.origin+'/assets/github.png'}
                 alt="my Github profile"
                 className='icon'
                ></img>
+               </a>
             </div>
             </div>
             
@@ -152,16 +156,20 @@ function App() {
               <a className='btn btn-color-2' target='_blank' href='https://docs.google.com/document/d/1rhD7TTAlkUoxoZlsYZNHaF7sNjJrN5Z0MWOPXPL1jkA/pub' >
               My Curriculum Vitae</a> 
               <div id="socials-container">
-               <img
+              <a href='https://www.linkedin.com/in/sukma-arbianto-santosa-87972585/' target='_blank'>
+                <img
                 src={window.location.origin+'/assets/linkedin.png'}
                 alt="my linkedin profile"
                 className='icon'
-               ></img>
-               <img
+                ></img>
+                </a>
+                <a href='https://github.com/devbianberkah' target='_blank'>
+                <img
                 src={window.location.origin+'/assets/github.png'}
                 alt="my Github profile"
                 className='icon'
-               ></img>
+                ></img>
+              </a>
             </div>
             </div>
             </div> 
