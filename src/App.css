@@ -10,9 +10,7 @@ GENERAL
   z-index: 1; /* Ensure content inside the container is above the background */
 }
 
-@media screen and (max-width: 1023px) {
- 
-}
+
 .App::before {
   content: "";
   position: absolute; /* Position the pseudo-element to cover the entire container */
@@ -294,12 +292,32 @@ ABOUT SECTION*/
   position: relative;
 }
 
+#about .title {
+  opacity: 0;
+  transform: translateY(150px); /* Start the elements 30px below their normal position */
+}
+
+#about .title.in-view{
+  transform: translateY(0px); /* Start the elements 30px below their normal position */
+  animation: fadeInUp 1s ease-out forwards;
+}
+
 .about-containers{
   margin-bottom: 2rem;
   margin-top: 2rem;
   display: flex;
   justify-content: space-around;
+  opacity: 0;
+  transform: translateY(150px);
+}
 
+.about-containers.in-view{
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  transform: translateY(0px);
+  animation: fadeInUp 1s ease-out forwards;
 }
 
 .about-pic{
@@ -526,6 +544,8 @@ footer p{
     animation-delay: 1s; /* Delay the social media icons */
 }
 
+
+
 .timeline-wrapper {
   margin: 5rem 1rem;
 	position: relative;
@@ -561,6 +581,8 @@ footer p{
 		box-shadow: 0 0 5px #ccc;
 		color: darken(#0684c2, 20);
 		text-align: center;
+    opacity: 0;
+    transform: translateX(-150px);
 
     h3 {
 			position: relative;
@@ -634,6 +656,12 @@ footer p{
 			}
 		}
 	}
+
+  .event.in-view{
+    opacity: 1;
+    transform: translateX(0px);
+    animation: fadeInRight 1s ease-out forwards;
+  }
 }
 
 @keyframes fadeInUp {
@@ -645,4 +673,15 @@ footer p{
         opacity: 1;
         transform: translateY(0); /* End at the normal position */
     }
+}
+
+@keyframes fadeInRight{
+  0% {
+    opacity: 0;
+    transform:translateX(-30px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
